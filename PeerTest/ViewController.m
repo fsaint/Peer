@@ -110,7 +110,7 @@
         self.browser = nil;
     }
     
-    
+    self.peer_count_label.alpha = 0.0;
     if (self.is_master)
         [self startListening];
     else

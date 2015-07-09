@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55703B31B4DB9BE00DC6635 /* MobileFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B55703B21B4DB9BE00DC6635 /* MobileFont.ttf */; };
+		B55703B51B4DBD7F00DC6635 /* robot_snake_800.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B55703B41B4DBD7F00DC6635 /* robot_snake_800.PNG */; };
+		B588A3ED1B46D057003F5BA7 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588A3EC1B46D057003F5BA7 /* StatusLabel.swift */; };
+		B597076D1B4C40FA00DA8B14 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B597076C1B4C40FA00DA8B14 /* AssetsLibrary.framework */; };
+		B5C1BE171B45BEF4004A4825 /* TeacherPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1BE161B45BEF4004A4825 /* TeacherPeer.swift */; };
+		B5C1BE191B45BF17004A4825 /* StudentPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1BE181B45BF17004A4825 /* StudentPeer.swift */; };
+		B5C1BE1D1B45D0FB004A4825 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1BE1C1B45D0FB004A4825 /* OptionViewController.swift */; };
 		B5D155661A110B9900D2D579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D155651A110B9900D2D579 /* main.m */; };
 		B5D155691A110B9900D2D579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D155681A110B9900D2D579 /* AppDelegate.m */; };
 		B5D1556C1A110B9900D2D579 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D1556B1A110B9900D2D579 /* ViewController.m */; };
@@ -27,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B55703B21B4DB9BE00DC6635 /* MobileFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MobileFont.ttf; sourceTree = "<group>"; };
+		B55703B41B4DBD7F00DC6635 /* robot_snake_800.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot_snake_800.PNG; sourceTree = "<group>"; };
+		B588A3EC1B46D057003F5BA7 /* StatusLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
+		B597076C1B4C40FA00DA8B14 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		B5C1BE161B45BEF4004A4825 /* TeacherPeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherPeer.swift; path = PeerTest/TeacherPeer.swift; sourceTree = "<group>"; };
+		B5C1BE181B45BF17004A4825 /* StudentPeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentPeer.swift; path = PeerTest/StudentPeer.swift; sourceTree = "<group>"; };
+		B5C1BE1C1B45D0FB004A4825 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		B5D155601A110B9900D2D579 /* PeerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D155641A110B9900D2D579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D155651A110B9900D2D579 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B597076D1B4C40FA00DA8B14 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +75,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5CB3C6D1B45BE1500F8A073 /* PeerLib */ = {
+			isa = PBXGroup;
+			children = (
+				B588A3EC1B46D057003F5BA7 /* StatusLabel.swift */,
+				B5C1BE181B45BF17004A4825 /* StudentPeer.swift */,
+				B5C1BE161B45BEF4004A4825 /* TeacherPeer.swift */,
+			);
+			name = PeerLib;
+			sourceTree = "<group>";
+		};
 		B5D155571A110B9900D2D579 = {
 			isa = PBXGroup;
 			children = (
+				B597076C1B4C40FA00DA8B14 /* AssetsLibrary.framework */,
+				B5CB3C6D1B45BE1500F8A073 /* PeerLib */,
 				B5D155621A110B9900D2D579 /* PeerTest */,
 				B5D1557C1A110B9A00D2D579 /* PeerTestTests */,
 				B5D155611A110B9900D2D579 /* Products */,
@@ -81,6 +108,7 @@
 		B5D155621A110B9900D2D579 /* PeerTest */ = {
 			isa = PBXGroup;
 			children = (
+				B5C1BE1C1B45D0FB004A4825 /* OptionViewController.swift */,
 				B5D155671A110B9900D2D579 /* AppDelegate.h */,
 				B5D155681A110B9900D2D579 /* AppDelegate.m */,
 				B5D1556A1A110B9900D2D579 /* ViewController.h */,
@@ -96,6 +124,8 @@
 		B5D155631A110B9900D2D579 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B55703B41B4DBD7F00DC6635 /* robot_snake_800.PNG */,
+				B55703B21B4DB9BE00DC6635 /* MobileFont.ttf */,
 				B5D155641A110B9900D2D579 /* Info.plist */,
 				B5D155651A110B9900D2D579 /* main.m */,
 			);
@@ -200,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D1556F1A110B9900D2D579 /* Main.storyboard in Resources */,
+				B55703B31B4DB9BE00DC6635 /* MobileFont.ttf in Resources */,
 				B5D155741A110B9900D2D579 /* LaunchScreen.xib in Resources */,
 				B5D155711A110B9900D2D579 /* Images.xcassets in Resources */,
+				B55703B51B4DBD7F00DC6635 /* robot_snake_800.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B588A3ED1B46D057003F5BA7 /* StatusLabel.swift in Sources */,
+				B5C1BE171B45BEF4004A4825 /* TeacherPeer.swift in Sources */,
 				B5D1556C1A110B9900D2D579 /* ViewController.m in Sources */,
 				B5D155691A110B9900D2D579 /* AppDelegate.m in Sources */,
+				B5C1BE1D1B45D0FB004A4825 /* OptionViewController.swift in Sources */,
 				B5D155661A110B9900D2D579 /* main.m in Sources */,
+				B5C1BE191B45BF17004A4825 /* StudentPeer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +452,7 @@
 				B5D155851A110B9A00D2D579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D155861A110B9A00D2D579 /* Build configuration list for PBXNativeTarget "PeerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +461,7 @@
 				B5D155881A110B9A00D2D579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
