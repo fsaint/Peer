@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeerTest/StudentPeer.swift"
-            timestampString = "458150637.827602"
+            timestampString = "458251201.002625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
             landmarkName = "session(_:didReceiveCertificate:fromPeer:certificateHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeerTest/OptionViewController.swift"
-            timestampString = "457991896.111496"
+            timestampString = "458161666.097336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "receivedImage(_:)"
             landmarkType = "5">
             <Locations>
@@ -106,12 +106,12 @@
                   moduleName = "PeerTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fsaint/github/Peer/PeerTest/OptionViewController.swift"
-                  timestampString = "458150465.715672"
+                  timestampString = "458254300.304424"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -121,27 +121,27 @@
                   moduleName = "PeerTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fsaint/github/Peer/PeerTest/OptionViewController.swift"
-                  timestampString = "458150465.715786"
+                  timestampString = "458254300.304668"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "8">
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "protocol witness for PeerTest.TeacherSessionDelegate.receivedImage &lt;A : PeerTest.TeacherSessionDelegate&gt;(PeerTest.TeacherSessionDelegate.Self)(ObjectiveC.UIImage) -&gt; () in conformance PeerTest.TeacherViewController : PeerTest.TeacherSessionDelegate in PeerTest"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed&gt; of PeerTest.TeacherViewController.receivedImage (PeerTest.TeacherViewController)(ObjectiveC.UIImage) -&gt; ()"
                   moduleName = "PeerTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fsaint/github/Peer/PeerTest/OptionViewController.swift"
-                  timestampString = "458150465.715886"
+                  timestampString = "458254300.305032"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "18">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -153,11 +153,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeerTest/TeacherPeer.swift"
-            timestampString = "458083204.977683"
+            timestampString = "458254300.011346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "requestScreenShot()"
             landmarkType = "5">
             <Locations>
@@ -169,12 +169,12 @@
                   moduleName = "PeerTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
-                  timestampString = "458150465.717083"
+                  timestampString = "458254300.306182"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -184,12 +184,138 @@
                   moduleName = "PeerTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
-                  timestampString = "458150465.717188"
+                  timestampString = "458254300.30633"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeerTest/TeacherPeer.swift"
+            timestampString = "458254300.011346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "deinit"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PeerTest.TeacherAdvertiser.__deallocating_deinit"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
+                  timestampString = "458254300.306997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PeerTest.TeacherAdvertiser.__deallocating_deinit"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
+                  timestampString = "458254300.307121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeerTest/TeacherPeer.swift"
+            timestampString = "458254300.011346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "close()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PeerTest.TeacherAdvertiser.__deallocating_deinit"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
+                  timestampString = "458254300.307871"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PeerTest.TeacherAdvertiser.__deallocating_deinit"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
+                  timestampString = "458254300.307983"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PeerTest.TeacherAdvertiser.close (PeerTest.TeacherAdvertiser)() -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
+                  timestampString = "458254300.308143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed&gt; of PeerTest.TeacherAdvertiser.close (PeerTest.TeacherAdvertiser)() -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/TeacherPeer.swift"
+                  timestampString = "458254300.308258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "18">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -201,13 +327,121 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeerTest/StudentPeer.swift"
-            timestampString = "458150637.827602"
+            timestampString = "458251255.854836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "session(_:didReceiveData:fromPeer:)"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "session(_:peer:didChangeState:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeerTest/StudentPeer.swift"
+            timestampString = "458254129.944031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "sendData(_:peers:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PeerTest.BasicPeer.sendData (PeerTest.BasicPeer)(Swift.Dictionary&lt;Swift.String, ObjectiveC.NSCoding&gt;, peers : Swift.Array&lt;ObjectiveC.MCPeerID&gt;) -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/StudentPeer.swift"
+                  timestampString = "458254300.309504"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "193">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PeerTest.BasicPeer.sendData (PeerTest.BasicPeer)(Swift.Dictionary&lt;Swift.String, ObjectiveC.NSCoding&gt;, peers : Swift.Array&lt;ObjectiveC.MCPeerID&gt;) -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/StudentPeer.swift"
+                  timestampString = "458254300.309596"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PeerTest.StudentSession.sendImage (PeerTest.StudentSession)(ObjectiveC.UIImage) -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/StudentPeer.swift"
+                  timestampString = "458254300.309678"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "662">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed and Exploded, Arg[1] = Owned To Guaranteed and Exploded, Arg[2] = Owned To Guaranteed&gt; of PeerTest.BasicPeer.sendData (PeerTest.BasicPeer)(Swift.Dictionary&lt;Swift.String, ObjectiveC.NSCoding&gt;, peers : Swift.Array&lt;ObjectiveC.MCPeerID&gt;) -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/StudentPeer.swift"
+                  timestampString = "458254300.309751"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed&gt; of PeerTest.StudentSession.sendImage (PeerTest.StudentSession)(ObjectiveC.UIImage) -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/StudentPeer.swift"
+                  timestampString = "458254300.309823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "658">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed, Arg[2] = Owned To Guaranteed&gt; of PeerTest.StudentSession.session (PeerTest.StudentSession)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MCSession&gt;, didReceiveData : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSData&gt;, fromPeer : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MCPeerID&gt;) -&gt; ()"
+                  moduleName = "PeerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fsaint/github/Peer/PeerTest/StudentPeer.swift"
+                  timestampString = "458254300.309898"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "3218">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

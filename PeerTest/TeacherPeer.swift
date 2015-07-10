@@ -32,14 +32,13 @@ enum TeacherSessionStatus {
 }
 
 
-
-
-
 public protocol TeacherSessionDelegate: class {
     func studentConnected(student:String)
     func studentConnecting(student:String)
     func studentDisConnected(student:String)
     func receivedImage(image:UIImage)
+    func receivedMessage(student:String, type:MessageTypes, additional:[String: AnyObject]?)
+    func receivedPingBack(stident:String)
 }
 
 
@@ -58,26 +57,34 @@ class TeacherSession: BasicPeer ,MCSessionDelegate {
     
     func session(session: MCSession!, peer peerID: MCPeerID!, didChangeState state: MCSessionState) {
         
-        
+        if session != self.session {
+            self.message("Weird Session")
+        }
         
         switch state{
         case .Connected:
             if let session_delegate = self.session_delegate {
-                session_delegate.studentConnected(peerID.displayName)
+                dispatch_async(dispatch_get_main_queue()) {
+                    session_delegate.studentConnected(peerID.displayName)
+                }
             }
         case .Connecting:
             if let session_delegate = self.session_delegate {
-                session_delegate.studentConnecting(peerID.displayName)
+                dispatch_async(dispatch_get_main_queue()) {
+                    session_delegate.studentConnecting(peerID.displayName)
+                }
             }
         case .NotConnected:
             if let session_delegate = self.session_delegate {
-                session_delegate.studentDisConnected(peerID.displayName)
+                dispatch_async(dispatch_get_main_queue()) {
+                    session_delegate.studentDisConnected(peerID.displayName)
+                }
             }
             
         }
         for p in session.connectedPeers{
             if let peer = p as? MCPeerID {
-                println("Peer \(peer.displayName)")
+                println("Peer: \(peer.displayName)")
             }
         }
         
@@ -86,9 +93,22 @@ class TeacherSession: BasicPeer ,MCSessionDelegate {
     
     func session(session: MCSession!, didReceiveData data: NSData!, fromPeer peerID: MCPeerID!) {
         if let data = data, sd = self.session_delegate{
-        //    let string_value = NSString(data: data, encoding: NSUTF8StringEncoding)
             if let r = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [String:AnyObject] {
-                println(r)
+                
+                
+                if let string_type = r[MessagesKeys.MessageType.rawValue] as? String {
+                    let type = MessageTypes(rawValue: string_type)
+                    if type == MessageTypes.SendRequestPing {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            sd.receivedPingBack(peerID.displayName)
+                        }
+                    }else if type == .RequestPing{
+                        self.sendData([MessagesKeys.MessageType.rawValue:MessageTypes.SendRequestPing.rawValue],peers: [peerID])
+                    }
+
+                
+                }
+                
                 if let image_data = r[MessagesKeys.MessageImage.rawValue] as? NSData{
                     let image = UIImage(data: image_data)
                     dispatch_async(dispatch_get_main_queue()){
@@ -142,6 +162,10 @@ class TeacherAdvertiser: BasicPeer, MCNearbyServiceAdvertiserDelegate {
     weak var session_delegate: TeacherSessionDelegate?
     
     
+    func pingAll(){
+       
+    }
+    
     init(delegate: Peer?, session_delegate: TeacherSessionDelegate) {
         
         self.peerid = MCPeerID(displayName: "Teacher")
@@ -161,8 +185,8 @@ class TeacherAdvertiser: BasicPeer, MCNearbyServiceAdvertiserDelegate {
     }
     
     deinit{
-        self.advertiser.delegate = nil
-        self.advertiser.stopAdvertisingPeer()
+        self.close()
+        
     }
     
     
@@ -186,16 +210,41 @@ class TeacherAdvertiser: BasicPeer, MCNearbyServiceAdvertiserDelegate {
        
     }
     
+    func pingStudent(student:String){
+        
+        if let session_peer = self.session_peer {
+            if let peers = session_peer.session.connectedPeers as? [MCPeerID]{
+                for peer in peers{
+                    if peer.displayName == student{
+                        session_peer.sendData([MessagesKeys.MessageType.rawValue: MessageTypes.RequestPing.rawValue], peers: [peer])
+                    }
+                }
+            }
+            
+        }
+    }
+    
     func requestScreenShot(){
         //self.sendData([], peers: self.session.connectedPeers)
         if let session = self.session_peer {
             
             if let peers = session.session.connectedPeers as? [MCPeerID]{
-                session.sendData([MessagesKeys.MessageType.rawValue:MessageTypes.RequestScreenShot.rawValue], peers:peers)
+                if let first = peers.first{
+                    session.sendData([MessagesKeys.MessageType.rawValue:MessageTypes.RequestScreenShot.rawValue], peers:[first])
+                }
             }
             
         }
-    }
+    } 
+    
     func close(){
+        self.advertiser.stopAdvertisingPeer()
+        self.advertiser.delegate = nil
+        
+        self.session_peer = nil
+        if let session_peer = self.session_peer {
+            session_peer.session.disconnect()
+            session_peer.session_delegate = nil
+        }
     }
 }

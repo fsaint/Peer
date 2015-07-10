@@ -11,6 +11,9 @@
             <string>MobileFont</string>
             <string>MobileFont</string>
             <string>MobileFont</string>
+            <string>MobileFont</string>
+            <string>MobileFont</string>
+            <string>MobileFont</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -223,7 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnO-Fg-5k8" customClass="StatusLabel" customModule="PeerTest" customModuleProvider="target">
-                                <rect key="frame" x="50" y="216" width="500" height="49"/>
+                                <rect key="frame" x="50" y="241" width="500" height="49"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -250,13 +253,41 @@
                                     <action selector="disconnect:" destination="9Uk-K1-THQ" eventType="touchUpInside" id="baA-zW-0OL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-BO-se7">
+                                <rect key="frame" x="16" y="72" width="44" height="44"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="MobileFont" family="Mobile Font" pointSize="25"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.054901960780000002" blue="0.1058823529" alpha="0.21772065033783783" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.75092724119999998" green="0.75092724119999998" blue="0.75092724119999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4N-Sz-QeZ">
+                                <rect key="frame" x="194" y="174" width="212" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.054901960780000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="65k-uS-BrO"/>
+                                    <constraint firstAttribute="width" constant="212" id="EJg-tf-Lq7"/>
+                                    <constraint firstAttribute="height" constant="44" id="aFs-h1-LRT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="cRv-Xb-lZs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MobileFont" family="Mobile Font" pointSize="25"/>
+                                <state key="normal" title="Ping">
+                                    <color key="titleColor" red="0.72549019609999998" green="0.78039215689999997" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pingMaster:" destination="9Uk-K1-THQ" eventType="touchUpInside" id="f7a-1M-g5i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.72549019607843135" green="0.7803921568627451" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="NnO-Fg-5k8" secondAttribute="centerX" id="8Cw-qP-w1q"/>
-                            <constraint firstItem="NnO-Fg-5k8" firstAttribute="top" secondItem="cAD-8X-WSj" secondAttribute="bottom" constant="59" id="cNg-Jj-4YA"/>
+                            <constraint firstItem="NnO-Fg-5k8" firstAttribute="top" secondItem="cAD-8X-WSj" secondAttribute="bottom" constant="84" id="cNg-Jj-4YA"/>
+                            <constraint firstAttribute="centerX" secondItem="n4N-Sz-QeZ" secondAttribute="centerX" id="fJT-OC-WPH"/>
                             <constraint firstAttribute="centerX" secondItem="cAD-8X-WSj" secondAttribute="centerX" id="keQ-t3-I9s"/>
+                            <constraint firstItem="n4N-Sz-QeZ" firstAttribute="top" secondItem="cAD-8X-WSj" secondAttribute="bottom" constant="17" id="o4Y-cC-RC1"/>
                             <constraint firstItem="cAD-8X-WSj" firstAttribute="top" secondItem="lEa-5g-Ujy" secondAttribute="bottom" constant="49" id="tew-AM-7D9"/>
                         </constraints>
                     </view>
@@ -329,10 +360,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="disconnect:" destination="olg-OW-Tlz" eventType="touchUpInside" id="hON-de-1wd"/>
                                     <action selector="requestScreenShot:" destination="olg-OW-Tlz" eventType="touchUpInside" id="qaz-8G-M2p"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvQ-ed-zrD">
+                                <rect key="frame" x="16" y="72" width="44" height="44"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="MobileFont" family="Mobile Font" pointSize="25"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.054901960780000002" blue="0.1058823529" alpha="0.21772065030000001" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.75092724119999998" green="0.75092724119999998" blue="0.75092724119999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.72549019607843135" green="0.7803921568627451" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>

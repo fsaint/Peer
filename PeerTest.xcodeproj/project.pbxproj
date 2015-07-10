@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B55703B31B4DB9BE00DC6635 /* MobileFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B55703B21B4DB9BE00DC6635 /* MobileFont.ttf */; };
 		B55703B51B4DBD7F00DC6635 /* robot_snake_800.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B55703B41B4DBD7F00DC6635 /* robot_snake_800.PNG */; };
+		B5709C551B4ED59E0043E712 /* ryu.png in Resources */ = {isa = PBXBuildFile; fileRef = B5709C541B4ED59E0043E712 /* ryu.png */; };
+		B5709C571B4F1C600043E712 /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5709C561B4F1C600043E712 /* DeviceExtension.swift */; };
 		B588A3ED1B46D057003F5BA7 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588A3EC1B46D057003F5BA7 /* StatusLabel.swift */; };
 		B597076D1B4C40FA00DA8B14 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B597076C1B4C40FA00DA8B14 /* AssetsLibrary.framework */; };
 		B5C1BE171B45BEF4004A4825 /* TeacherPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1BE161B45BEF4004A4825 /* TeacherPeer.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		B55703B21B4DB9BE00DC6635 /* MobileFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MobileFont.ttf; sourceTree = "<group>"; };
 		B55703B41B4DBD7F00DC6635 /* robot_snake_800.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robot_snake_800.PNG; sourceTree = "<group>"; };
+		B5709C541B4ED59E0043E712 /* ryu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ryu.png; sourceTree = "<group>"; };
+		B5709C561B4F1C600043E712 /* DeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
 		B588A3EC1B46D057003F5BA7 /* StatusLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
 		B597076C1B4C40FA00DA8B14 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		B5C1BE161B45BEF4004A4825 /* TeacherPeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherPeer.swift; path = PeerTest/TeacherPeer.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				B588A3EC1B46D057003F5BA7 /* StatusLabel.swift */,
 				B5C1BE181B45BF17004A4825 /* StudentPeer.swift */,
 				B5C1BE161B45BEF4004A4825 /* TeacherPeer.swift */,
+				B5709C561B4F1C600043E712 /* DeviceExtension.swift */,
 			);
 			name = PeerLib;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		B5D155631A110B9900D2D579 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5709C541B4ED59E0043E712 /* ryu.png */,
 				B55703B41B4DBD7F00DC6635 /* robot_snake_800.PNG */,
 				B55703B21B4DB9BE00DC6635 /* MobileFont.ttf */,
 				B5D155641A110B9900D2D579 /* Info.plist */,
@@ -229,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5709C551B4ED59E0043E712 /* ryu.png in Resources */,
 				B5D1556F1A110B9900D2D579 /* Main.storyboard in Resources */,
 				B55703B31B4DB9BE00DC6635 /* MobileFont.ttf in Resources */,
 				B5D155741A110B9900D2D579 /* LaunchScreen.xib in Resources */,
@@ -256,6 +263,7 @@
 				B5D1556C1A110B9900D2D579 /* ViewController.m in Sources */,
 				B5D155691A110B9900D2D579 /* AppDelegate.m in Sources */,
 				B5C1BE1D1B45D0FB004A4825 /* OptionViewController.swift in Sources */,
+				B5709C571B4F1C600043E712 /* DeviceExtension.swift in Sources */,
 				B5D155661A110B9900D2D579 /* main.m in Sources */,
 				B5C1BE191B45BF17004A4825 /* StudentPeer.swift in Sources */,
 			);

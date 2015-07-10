@@ -13,6 +13,8 @@ import AssetsLibrary
 enum MessagesKeys : String, Printable {
     case MessageType = "message_type"
     case MessageImage = "message_image"
+    case Action = "message_action"
+    case ActionParamentes = "action_paramenters"
     
     
     var description : String {
@@ -22,10 +24,20 @@ enum MessagesKeys : String, Printable {
     }
 }
     
+public
 enum MessageTypes : String, Printable {
     case SendTakenScreenshot = "send_taken_screenshot_image"
-    case SendRequestedScreenshot = "send_requested_screenshot_image"
     case RequestScreenShot = "request_screenshot"
+    case SendRequestedScreenshot = "send_requested_screenshot_image"
+    
+    case RequestAction = "request_action"
+    case SendActionPerformed = "send_action_performed"
+    
+    
+    case RequestPing = "request_ping"
+    case SendRequestPing = "send_request_ping"
+    
+    public
     var description : String {
         get {
             return self.rawValue
@@ -40,7 +52,14 @@ class BasicPeer: NSObject {
     
     func sendData(data:[String:NSCoding], peers:[MCPeerID]){
         let binary = NSKeyedArchiver.archivedDataWithRootObject(data)
-        self.session.sendData(binary, toPeers: peers, withMode: MCSessionSendDataMode.Reliable, error: nil)
+        
+        var error: NSError?
+        self.session.sendData(binary, toPeers: peers, withMode: MCSessionSendDataMode.Reliable, error: &error)
+        if let error = error {
+            print("\(error)")
+        }else{
+            println("DATA SENT")
+        }
     }
 
     
@@ -233,6 +252,8 @@ class StudentSession: BasicPeer ,MCSessionDelegate {
                 if let session_delegate = self.session_delegate {
                     if let room = self.room{
                         session_delegate.connectedToRoom(room)
+                    }else{
+                        self.message("???")
                     }
                 }
             case .Connecting:
@@ -240,6 +261,8 @@ class StudentSession: BasicPeer ,MCSessionDelegate {
                 if let session_delegate = self.session_delegate {
                     if let room = self.room{
                         session_delegate.connectingToRoom(room)
+                    }else{
+                        self.message("???")
                     }
                 }
             
@@ -248,6 +271,8 @@ class StudentSession: BasicPeer ,MCSessionDelegate {
                 if let session_delegate = self.session_delegate {
                     if let room = self.room{
                         session_delegate.disconnectedFromRoom(room)
+                    }else{
+                        self.message("???")
                     }
                 }
         }
@@ -289,17 +314,34 @@ class StudentSession: BasicPeer ,MCSessionDelegate {
     
     func session(session: MCSession!, didReceiveData data: NSData!, fromPeer peerID: MCPeerID!) {
       
-
         if let data = data, sd = self.session_delegate{
             //    let string_value = NSString(data: data, encoding: NSUTF8StringEncoding)
             if let r = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [String:AnyObject] {
                 println(r)
                 if let message_type = r[MessagesKeys.MessageType.rawValue] as? String,  message = MessageTypes(rawValue: message_type) {
+                    self.message("Got Data \(message)")
+                    
                     switch message {
                     case .SendTakenScreenshot:
                         println(message)
+                        
                     case .SendRequestedScreenshot:
                         println(message)
+                        
+                    case .RequestAction:
+                        println(message)
+                        
+                    case .SendActionPerformed:
+                        println(message)
+                        
+                    case .SendRequestPing:
+                        println(message)
+                        
+                    case .RequestPing:
+                        if let master = self.room?.peer{
+                            self.sendData([MessagesKeys.MessageType.rawValue:MessageTypes.SendRequestPing.rawValue],peers: [master])
+                        }
+                        
                     case .RequestScreenShot:
                         dispatch_async(dispatch_get_main_queue()){
                             self.sendScreenShot()
@@ -337,6 +379,12 @@ class StudentSession: BasicPeer ,MCSessionDelegate {
         
     }
     
+    func pingMaster(){
+        if let master = self.room?.peer {
+            self.sendData([MessagesKeys.MessageType.rawValue:MessageTypes.RequestPing.rawValue], peers: [master])
+        }
+    }
+    
     func disconnect(){
         session.disconnect()
         session.delegate = nil
@@ -361,7 +409,7 @@ class StudentRoomBrowser: BasicPeer, MCNearbyServiceBrowserDelegate {
     weak var room_delegate:StudentRoomBrowserDelegate?
     
     init(delegate: StudentRoomBrowserDelegate?) {
-        self.peerid = MCPeerID(displayName: "Student")
+        self.peerid = MCPeerID(displayName: UIDevice.currentDevice().modelName)
         self.browser = MCNearbyServiceBrowser(peer: self.peerid, serviceType: service)
         super.init(peerid: self.peerid)
         self.room_delegate = delegate
@@ -380,6 +428,7 @@ class StudentRoomBrowser: BasicPeer, MCNearbyServiceBrowserDelegate {
         self.message("Found Master Peer \(room.peer.displayName)")
         
         let student_session = StudentSession(peerid: self.peerid)
+        student_session.peerDelegate = self.peerDelegate
         student_session.room = room
         student_session.peerDelegate = self.peerDelegate
         student_session.session_delegate = session_delegate
